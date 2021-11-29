@@ -6,7 +6,7 @@
     <title>Unity WebGL Player | coLABArts-Shelter</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" width=800 height=600 style="width: 800px; height: 600px; background: #231F20"></canvas>
+    <canvas id="unity-canvas" width=800 height=600 style="width: 100%; background: #231F20"></canvas>
     <script src="Build/shelter-webgll.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -17,6 +17,8 @@
         companyName: "Rutgers University GRID",
         productName: "coLABArts-Shelter",
         productVersion: "0.1",
+        width = window.innerWidth,
+        height = 3*window.innerWidth/4,
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
